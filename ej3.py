@@ -63,9 +63,22 @@
 norte = [0, 1]
 sur = [0, -1]
 este = [1, 0]
-oeste = [0, 1]
+oeste = [-1, 0]
 
 norOeste = [-1, 1]
 norEste = [1, 1]
 surOeste = [-1, -1]
 surEste = [1, -1]
+
+posInicial = [0, 0]
+
+conjuntoTest = [("A", "S", "B"), ("B", "N", "A"), ("C", "S", "A")]
+
+
+def main(conjunto=conjuntoTest):
+
+    return
+
+
+if __name__ == "__main__":
+    main()
