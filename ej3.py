@@ -1,12 +1,7 @@
-# NO  N  NE
-#  O     E
-# SO  S  SE
-
 
 opuestos = {"NO": "SE", "N": "S", "NE": "SO", "O": "E"}
 todosLosOpuestos = {"NO": "SE", "SE": "NO", "N": "S",
                     "S": "N", "NE": "SO", "SO": "NE", "O": "E", "E": "O"}
-
 
 conjuntoTest = [("A", "S", "B"), ("B", "N", "A"), ("C", "S", "A")]
 # conjuntoTest = [("A", "S", "B"),
@@ -21,7 +16,7 @@ def opuesto(regla):
 def comprobarDiccionarioDeSimbolos(simbolos):
     for simbolo in simbolos:
         diccAux = {}
-        # comprobamos si hay mas de un mismo simbolo al que se va, con una direccion distinta
+        # comprobamos si hay mas de un mismo simbolo al que se va, con una direccion distinta (recordemos que no hay tuplas duplicadas)
         for tupla in simbolos[simbolo]:
             direccion = tupla[0]
             if direccion not in diccAux:
@@ -58,6 +53,7 @@ def main(conjunto=conjuntoTest):
         simboloInicial = regla[0]
         direccionOriginal = regla[1]
         simboloTerminal = regla[2]
+
         if simboloInicial not in simbolos:
             simbolos[simboloInicial] = [(direccionOriginal, simboloTerminal)]
         else:
